@@ -23,31 +23,37 @@
     </main>
 
     <script>
+      const video = document.querySelector('video');
+      const button = document.querySelector('button');
+
       function MediaPlayer(config) {
-        this.media = config.el;
+        this.media = config.el
       }
 
       MediaPlayer.prototype.play = function() {
-        this.media.play();
-      };
+        video.play()
+      }
 
       MediaPlayer.prototype.pause = function() {
-        this.media.pause();
-      };
+        video.pause()
+      }
 
-      MediaPlayer.prototype.togglePlay = function() {
-        if (this.media.paused) {
-          this.play();
-        } else {
-          this.pause();
-        }
-      };
-
-      const video = document.querySelector('video');
       const player = new MediaPlayer({ el: video });
-
-      const button = document.querySelector('button');
-      button.onclick = () => player.togglePlay();
+      
+      let notplaying = true;
+      button.onclick = () => {
+        
+        function nplay() {
+          if (notplaying){
+            video.play();
+            notplaying = false;
+          } else {
+            video.pause();
+            notplaying = true;
+          }
+        }
+        nplay()
+      }
     </script>
   </body>
 </html>
