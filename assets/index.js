@@ -1,22 +1,11 @@
 import MediaPlayer from './MediaPlayer.js';
+import Autoplay from './plugins/Autoplay'
 
 const video = document.querySelector('video');
 const button = document.querySelector('button');
 
 
-const player = new MediaPlayer({ el: video });
+const player = new MediaPlayer({ el: video, plugins: [] });
       
 let notplaying = true;
-button.onclick = () => { player.toggleplay()
-        
-    // function playVideo() {
-    //     if (notplaying){
-    //         player.play();
-    //         notplaying = false;
-    //     } else {
-    //         player.pause();
-    //         notplaying = true;
-    //       }
-    //     }
-    //     playVideo()
-      }
+button.onclick = () => { player.toggleplay() }
