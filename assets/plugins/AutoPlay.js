@@ -7,3 +7,5 @@ AutoPlay.prototype.run = function(player) {
 };
 
 export default AutoPlay;
+
+// Don't know why but the mute() function doesn't work :|
