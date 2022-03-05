@@ -43,3 +43,14 @@ let x: [string, number] = ["hello", 10]
 let y: [string, number] = ["hi", 20]
 console.log(x)
 console.log(y)
+
+/*
+let arreglo: number[] = []
+function lista() {
+    for(let i=0; i<50; i++){
+        arreglo.push(i * 10)
+    }
+    arreglo.forEach(a => console.log(a))
+}
+lista()
+*/
