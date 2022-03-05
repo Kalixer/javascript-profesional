@@ -88,7 +88,7 @@ enum Colores {
 interface Rectangulo {
     ancho: number
     alto: number
-    color?: Colores;
+    color?: Colores
 }
 
 let rect: Rectangulo = {
