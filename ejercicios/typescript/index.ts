@@ -29,7 +29,7 @@ enum Color {
 }
 
 let colorFavorito: Color = Color.Rojo;
-console.log(`Mi color vaforito es el ${colorFavorito}`)
+// console.log(`Mi color favorito es el ${colorFavorito}`)
 
 // Any
 let comodin: any = "joker";
@@ -41,8 +41,8 @@ let person: object = { name:"Luis" };
 // Tuple
 let x: [string, number] = ["hello", 10]
 let y: [string, number] = ["hi", 20]
-console.log(x)
-console.log(y)
+// console.log(x)
+// console.log(y)
 
 /*
 let arreglo: number[] = []
@@ -76,4 +76,35 @@ function fullName(fisrtName: string, lastName: string = 'Smith'): string {
 }
 
 const alejandro = fullName('Alejandro')
-console.log(alejandro)
+// console.log(alejandro)
+
+
+// Interfaces
+enum Colores {
+    Rojo = "Rojo",
+    Verde = "Verde",
+}
+
+interface Rectangulo {
+    ancho: number
+    alto: number
+    color?: Colores;
+}
+
+let rect: Rectangulo = {
+    ancho: 4,
+    alto: 6,
+    color: Colores.Rojo,
+}
+
+function area(r: Rectangulo) {
+    return r.alto * r.ancho
+}
+
+const areaRect = area(rect);
+// console.log(areaRect);
+
+rect.toString = function() {
+    return this.color ? `Un rectangulo ${this.color}` : `Un rectangulo`
+}
+console.log(rect.toString())
