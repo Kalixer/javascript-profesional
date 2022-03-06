@@ -7,6 +7,7 @@ class AutoPlay {
       player.media.muted = true;
     }
     player.play();
+
   }
 }
 

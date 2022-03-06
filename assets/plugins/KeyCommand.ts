@@ -5,11 +5,32 @@ class KeyCommand {
 
     constructor() {}
     run(player) {
-        this.player = player;
 
-        document.addEventListener("keydown", this.player.unmute);
-        
-        
+        const keys = {
+            PLAY: 75,
+            MUTE: 77,
+        }
+
+        document.addEventListener("keydown", clickKey);
+
+        function clickKey(key) {
+            switch(key.keyCode) {
+                case keys.PLAY:
+                    if(player.media.paused) {
+                        player.play()
+                    } else {
+                        player.pause()
+                    }
+                break;
+                case keys.MUTE:
+                    if(player.media.muted) {
+                        player.unmute()
+                    } else {
+                        player.mute()
+                    }
+                break;
+            }
+        }
     }
 }
 
