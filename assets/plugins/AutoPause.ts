@@ -45,7 +45,3 @@ class AutoPause {
   }
   
   export default AutoPause;
-
-  document.addEventListener("visibilitychange", () => {
-    console.log(document.visibilityState)
-  })
