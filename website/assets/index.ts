@@ -1,8 +1,8 @@
-import MediaPlayer from './MediaPlayer';
-import AutoPlay from './plugins/AutoPlay';
-import AutoPause from './plugins/AutoPause';
-import KeyCommand from './plugins/KeyCommand';
-import Ads from './plugins/Ads';
+import MediaPlayer from '@kalixer/platzimediaplayer/lib/MediaPlayer';
+import AutoPlay from '@kalixer/platzimediaplayer/lib/plugins/AutoPlay';
+import AutoPause from '@kalixer/platzimediaplayer/lib/plugins/AutoPause';
+import KeyCommand from '@kalixer/platzimediaplayer/lib/plugins/KeyCommand';
+import Ads from '@kalixer/platzimediaplayer/lib/plugins/Ads';
 
 const video = document.querySelector('video');
 const player = new MediaPlayer({

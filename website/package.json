@@ -17,6 +17,7 @@
     "last 1 Chrome version"
   ],
   "dependencies": {
+    "@kalixer/platzimediaplayer": "^1.0.0",
     "ansi-regex": "^6.0.1",
     "uuid": "^3.4.0"
   }
